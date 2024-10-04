@@ -1,8 +1,5 @@
-# React + Vite
+# Pokemon Search
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An app that lets you search for different pokemon in the pokedex!
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img width="981" alt="Screenshot 2024-10-03 at 11 30 51 PM" src="https://github.com/user-attachments/assets/e2052d24-074a-468b-acce-5309edbb67f8">
