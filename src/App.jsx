@@ -10,6 +10,7 @@ async function fetchData(){
 			throw new Error('Could not fetch resource.');
 		}
 		const data = await response.json();
+    console.log(data);
     // Get Name
     const pokemonName = data.name;
     const nameElement = document.getElementById('pokemonName');
@@ -17,7 +18,7 @@ async function fetchData(){
     // Get Number
     const pokemonNumber = data.order;
     const numElement = document.getElementById('pokemonNumber');
-    numElement.innerText = pokemonNumber;
+    numElement.innerText = `No.` + pokemonNumber;
 		// Get Sprite
     const pokemonSprite = data.sprites.front_default;
     const imgElement = document.getElementById('pokemonSprite');
@@ -26,9 +27,9 @@ async function fetchData(){
     // Get Type(s)
     const pokemonType = data.types;
     const typeElement = document.getElementById('pokemonType');
-    typeElement.innerText = '';
+    typeElement.innerText = `Type: `;
     let typ = 0;
-    for (const i of pokemonType) {
+    for (const i of data.types) {
       if(typ>0) typeElement.innerText += ',';
       typeElement.innerText += i.type.name;
       typ++;
@@ -41,15 +42,20 @@ async function fetchData(){
 }
 
 function App() {
-  const [count, setCount] = useState(0)
-
 
   return (
     <>
     <div className="main-container">
     <div className="input-container">
       <h1>Pokemon Search</h1>
-      <input type="text" id="searchedPokemon" placeholder='Enter Pokemon name'></input>
+      <input type="text" id="searchedPokemon"
+        placeholder='Enter Pokemon' 
+        onKeyPress={event => {
+            if(event.key == "Enter") {
+              fetchData();
+            }
+          }}
+        />
       <button id="search" onClick={fetchData}>Search Pokemon</button>
       </div>
       <div className="dex-container">
