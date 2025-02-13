@@ -13,6 +13,7 @@
   --text-color: rgb(0, 0, 0);
 
   font-family:"Pokemon";
+  
 }
 @font-face {
   font-family: "Pokemon";   /*Can be any text*/
@@ -20,10 +21,6 @@
     url("./fonts/PokemonGB.ttf") format("truetype");
 }
 
-
-#search {
-  margin-bottom: 2rem;
-}
 
 .logo {
   height: 6em;
@@ -60,104 +57,129 @@
 .footer {
   margin-top: 3em;
   color: #888;
+  font-size: small;
 }
+
+#type, #stats {
+  line-height: 1.2;
+}
+
 
 .main-container {
   display: flex;
   justify-content: space-between;
   align-items: top;
-  gap: 2em
+  gap: 2em;
+}
+
+.input-container h1 {
+  font-size: 2em;
+}
+.input-container {
+  padding: 8%;
+}
+
+#searchedPokemon {
+  margin-bottom: 1em;
+  font-size: .8em;
+}
+#search {
+  margin-bottom: 2rem;
+  font-size: .8em;
+  padding: 10px 5px 5px 5px;
 }
 
 
 .dex-container {
   display: flex;
 }
+
+.red-bg {
+  background-color: var(--dex-red);
+  height: 40em;
+  width: 30em;
+  border-radius: 15px;
+  box-shadow: 15px 15px 0px var(--dex-dark-red);
+}
 .sidebar-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 5em;
-  margin-left: -5.1em;
+  margin-top: 3.25em;
+  margin-left: -3.2em;
   background-color: var(--dex-red);
-  height: 60em;
-  width: 5em;
-  border: 5px solid var(--dex-dark-red);
-  border-radius: 30px;
+  height: 92%;
+  width: 3em;
+  border: 3px solid var(--dex-dark-red);
+  border-radius: 20px;
 }
 .sidebar-top {
   background-color: var(--dex-red);
-  height: 6em;
-  width: 5em;
-  margin-left: -.25em;
-  border: 5px solid var(--dex-dark-red);
-  border-radius: 30px 30px 0px 0px;
+  height: 3.5em;
+  width: 100%;
+  margin-left: -.2em;
+  border: 3px solid var(--dex-dark-red);
+  border-radius: 20px 20px 0px 0px;
 }
 .sidebar-bottom {
   background-color: var(--dex-red);
-  height: 6em;
-  width: 5em;
-  margin-left: -.25em;
-  border: 5px solid var(--dex-dark-red);
-  border-radius: 0px 0px 30px 30px;
-}
-.red-bg {
-  background-color: var(--dex-red);
-  height: 65em;
-  width: 50em;
-  border-radius: 25px;
-  box-shadow: 30px 30px 0px var(--dex-dark-red);
+  height: 3.5em;
+  width: 100%;
+  margin-left: -.2em;
+  border: 3px solid var(--dex-dark-red);
+  border-radius: 0px 0px 20px 20px;
 }
 
 .red-top-bar {
   background: var(--dex-red);
-  height: 3em;
-  width: 50em;
-  border-bottom: 5px solid var(--dex-dark-red);
+  height: 2em;
+  width: 100%;
+  border-bottom: 3px solid var(--dex-dark-red);
 }
 .red-top-bar-2 {
   background: var(--dex-red);
-  height: 5em;
-  width: 26em;
-  margin-top: -.35em;
-  border-bottom: 5px solid var(--dex-dark-red);
-  border-right: 5px solid var(--dex-dark-red);
+  height: 2.5em;
+  width: 50%;
+  margin-top: -.2em;
+  border-bottom: 3px solid var(--dex-dark-red);
+  border-right: 3px solid var(--dex-dark-red);
+  border-radius: 0px 0px 25px 0px;
 }
 .blue-circle {
   background-color: blue;
-  height: 6em;
-  width: 6em;
-  margin-left: 3em;
+  height: 3.5em;
+  width: 3.5em;
+  margin-left: 1.75em;
   border-radius: 50px;
-  outline: 12px solid var(--dex-grey);
+  outline: 6px solid var(--dex-grey);
 }
 .circle-container {
   display: flex;
-  margin-top: 2em;
+  margin-top: 1.25em;
 }
 .red {
   background-color: red;
-  height: 1em;
-  width: 1em;
-  margin-left: 4em;
+  height: .5em;
+  width: .5em;
+  margin-left: 2em;
   border-radius: 50px;
-  border: 1px solid var(--dex-dark-red);
+  border: 3px solid darkred;
 }
 .yellow {
   background-color: yellow;
-  height: 1em;
-  width: 1em;
-  margin-left: 2em;
+  height: .5em;
+  width: .5em;
+  margin-left: 1em;
   border-radius: 50px;
-  border: 1px solid var(--dex-dark-red);
+  border: 3px solid rgb(236, 175, 21);
 }
 .green {
   background-color: green;
-  height: 1em;
-  width: 1em;
-  margin-left: 2em;
+  height: .5em;
+  width: .5em;
+  margin-left: 1em;
   border-radius: 50px;
-  border: 1px solid var(--dex-dark-red);
+  border: 3px solid rgb(0, 87, 0);
 }
 
 .silver-section {
@@ -166,31 +188,32 @@
   align-items: center;
   justify-content: center;
   background-color: var(--dex-grey);
-  height: 30em;
-  width: 40em;
+  height: 45%;
+  width: 80%;
   margin-left: auto;
-  margin-right: 7.5em;
-  margin-top: 4em;
+  margin-right: 4.2em;
+  margin-top: 2em;
   border-radius: 10px 10px 10px 50px;
 }
 .top-circle-container {
   display: flex;
   width: 15%;
-  margin-bottom: 1em;
+  margin-top: .5em;
+  margin-bottom: .5em;
   justify-content: space-between;
 
 }
 .red-circle {
   background-color: red;
-  height: 1em;
-  width: 1em;
+  height: .5em;
+  width: .5em;
   border-radius: 50px;
-  border: 1px solid black;
+  border: 3px solid darkred;
 }
 .screen {
   background-color: var(--dex-screen-color);
-  height: 23em;
-  width: 33em;
+  height: 80%;
+  width: 82%;
   border: 2px solid black;
   border-radius: 10px;
   color: var(--text-color);
@@ -204,85 +227,230 @@
 }
 .big-red-circle {
   background-color: red;
-  height: 2em;
-  width: 2em;
+  height: 1em;
+  width: 1em;
   margin-left: 1em;
-  margin-top: .5em;
-  border-radius: 50px;
-  border: 1px solid black;
+  border-radius: 1em;
+  border: 3px solid darkred;
   margin-bottom: 0;
 }
 .lines {
   background-color: var(--dex-black);
-  height: .4em;
-  width: 3em;
-  margin-right: .5em;
-  margin-top: .4em;
-  gap: .5em
+  height: .2em;
+  width: 2em;
+  margin: .4em .5em .4em 0;
 }
 
 .buttons-container {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 5em;
-  margin-right: 6.5em;
+  margin-top: 3em;
+  margin-right: 1em;
+  width: 90%;
 }
 .black-button {
   background-color: var(--dex-black);
-  height: 6em;
-  width: 6em;
+  height: 3.5em;
+  width: 3.5em;
   border-radius: 50px;
-}
-.color-buttons {
-  margin-right: 2em;
+  border: 5px solid black;
+  cursor: pointer;
 }
 .small-buttons {
   display: flex;
-  gap: 3em;
-  margin-bottom: 2em;
+  gap: 1em;
+  margin-bottom: 1em;
 }
 .red-button {
   background-color: red;
-  height: 1em;
-  width: 5em;
+  height: .5em;
+  width: 2.5em;
   border-radius: 50px;
-  border: 1px solid var(--dex-dark-red);
+  border: 5px solid darkred;
+  cursor: pointer;
 }
 .blue-button {
   background-color: blue;
-  height: 1em;
-  width: 5em;
+  height: .5em;
+  width: 2.5em;
   border-radius: 50px;
-  border: 1px solid var(--dex-dark-red);
+  border: 5px solid darkblue;
+  cursor: pointer;
 }
 .green-section {
   background-color: green;
-  height: 7em;
-  width: 13em;
+  height: 4em;
+  width: 7em;
   border-radius: 10px;
   float: right;
+  border: 5px solid darkgreen;
 }
-.d-pad {
-  background: var(--dex-black);
-  height: 140px;
-  position: relative;
-  width: 50px;
+.d-pad .vertical {
+  display: flex;
+  flex-direction: column;
 }
-.d-pad:after {
-  background: var(--dex-black);
-  content: "";
-  height: 50px;
-  left: -45px;
-  position: absolute;
-  top: 45px;
-  width: 140px;
+.d-pad .horizontal {
+  display: flex;
+  flex-direction: row;
+  margin-top: -3.65em;
 }
 
-#searchedPokemon {
-  margin-bottom: 1em;
+.up {
+  background: var(--dex-black);
+  height: 1.5em;
+  width: 1.5em;
+  position: relative;
+  border: solid black;
+  border-width: 5px 5px 0px 5px;
 }
+
+.center {
+  background: var(--dex-black);
+  height: 1.5em;
+  width: 1.5em;
+  position: relative;
+  border: solid var(--dex-black);
+  border-width: 0px 5px 0px 5px;
+}
+
+.down {
+  background: var(--dex-black);
+  height: 1.5em;
+  width: 1.5em;
+  position: relative;
+  border: solid black;
+  border-width: 0px 5px 5px 5px;
+}
+
+.left {
+  background: var(--dex-black);
+  height: 1.5em;
+  width: 1.5em;
+  position: relative;
+  border: solid black;
+  border-width: 5px 0px 5px 5px;
+  margin-left: -1.5em;
+  cursor: pointer;
+}
+
+.right {
+  background: var(--dex-black);
+  height: 1.5em;
+  width: 1.5em;
+  position: relative;
+  border: solid black;
+  border-width: 5px 5px 5px 0px;
+  margin-left: 1.5em;
+  cursor: pointer;
+}
+
+.black-button .tooltiptext {
+  visibility: hidden;
+  width: 5em;
+  background-color: var(--dex-black);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  border: 2px solid black;
+  font-size: .75em;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.black-button:hover .tooltiptext {
+  visibility: visible;
+}
+
+.red-button .tooltiptext {
+  visibility: hidden;
+  width: 6em;
+  background-color: var(--dex-black);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  border: 2px solid black;
+  font-size: .75em;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.red-button:hover .tooltiptext {
+  visibility: visible;
+}
+
+.blue-button .tooltiptext {
+  visibility: hidden;
+  width: 6em;
+  background-color: var(--dex-black);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  border: 2px solid black;
+  font-size: .75em;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.blue-button:hover .tooltiptext {
+  visibility: visible;
+}
+
+.left .tooltiptext {
+  visibility: hidden;
+  width: 10em;
+  background-color: var(--dex-black);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  border: 2px solid black;
+  font-size: .75em;
+  line-height: 1;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.left:hover .tooltiptext {
+  visibility: visible;
+}
+
+.right .tooltiptext {
+  visibility: hidden;
+  width: 10emx;
+  background-color: var(--dex-black);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  border: 2px solid black;
+  font-size: .75em;
+  line-height: 1;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.right:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+
+
 .screen p {
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: bold;
   text-transform: uppercase;
 }
