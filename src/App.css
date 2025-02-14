@@ -322,131 +322,25 @@
   border-width: 0px 5px 5px 5px;
 }
 
-.left {
+
+.left, .right {
   background: var(--dex-black);
   height: 1.5em;
   width: 1.5em;
   position: relative;
   border: solid black;
+  cursor: pointer;
+}
+
+.left {
   border-width: 5px 0px 5px 5px;
   margin-left: -1.5em;
-  cursor: pointer;
 }
 
 .right {
-  background: var(--dex-black);
-  height: 1.5em;
-  width: 1.5em;
-  position: relative;
-  border: solid black;
   border-width: 5px 5px 5px 0px;
   margin-left: 1.5em;
-  cursor: pointer;
 }
-
-.black-button .tooltiptext {
-  visibility: hidden;
-  width: 5em;
-  background-color: var(--dex-black);
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  border: 2px solid black;
-  font-size: .75em;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-}
-
-.black-button:hover .tooltiptext {
-  visibility: visible;
-}
-
-.red-button .tooltiptext {
-  visibility: hidden;
-  width: 6em;
-  background-color: var(--dex-black);
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  border: 2px solid black;
-  font-size: .75em;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-}
-
-.red-button:hover .tooltiptext {
-  visibility: visible;
-}
-
-.blue-button .tooltiptext {
-  visibility: hidden;
-  width: 6em;
-  background-color: var(--dex-black);
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  border: 2px solid black;
-  font-size: .75em;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-}
-
-.blue-button:hover .tooltiptext {
-  visibility: visible;
-}
-
-.left .tooltiptext {
-  visibility: hidden;
-  width: 10em;
-  background-color: var(--dex-black);
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  border: 2px solid black;
-  font-size: .75em;
-  line-height: 1;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-}
-
-.left:hover .tooltiptext {
-  visibility: visible;
-}
-
-.right .tooltiptext {
-  visibility: hidden;
-  width: 10emx;
-  background-color: var(--dex-black);
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  border: 2px solid black;
-  font-size: .75em;
-  line-height: 1;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-}
-
-.right:hover .tooltiptext {
-  visibility: visible;
-}
-
-
 
 
 .screen p {
